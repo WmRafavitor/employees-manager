@@ -4,6 +4,11 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue';
 import Layout from '@/views/Layout.vue';
 
+// Employees views
+import EmployeesList from '@/views/Employees/List.vue';
+import AddEmployee from '@/views/Employees/Add.vue';
+import EditEmployee from '@/views/Employees/Edit.vue';
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -23,6 +28,21 @@ Vue.use(VueRouter)
         path: '',
         name: 'home',
         component: Home
+      },
+      {
+        path: 'employees/new',
+        name: 'add-employee',
+        component: AddEmployee,
+      },
+      {
+        path: 'employees/edit/:id',
+        name: 'edit-employee',
+        component: EditEmployee,
+      },
+      {
+        path: 'employees',
+        name: 'employees-list',
+        component: EmployeesList,
       },
     ]
   }
