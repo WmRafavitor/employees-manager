@@ -115,7 +115,7 @@ export default {
       });
     },
     formatDate(date) {
-      return format(parse(date, 'isoDateTime'), 'DD/MM/YYYY');
+      return format(parse(date, 'YYYY-MM-DD'), 'DD/MM/YYYY');
     }
   },
 };

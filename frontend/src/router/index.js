@@ -35,6 +35,7 @@ Vue.use(VueRouter)
         component: AddEmployee,
       },
       {
+        props: true,
         path: 'employees/edit/:id',
         name: 'edit-employee',
         component: EditEmployee,
