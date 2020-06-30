@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue';
 import Layout from '@/views/Layout.vue';
 
@@ -26,8 +25,7 @@ Vue.use(VueRouter)
     children: [
       {
         path: '',
-        name: 'home',
-        component: Home
+        redirect: '/employees'
       },
       {
         path: 'employees/new',

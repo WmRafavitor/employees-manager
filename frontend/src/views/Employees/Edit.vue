@@ -1,11 +1,20 @@
 <template>
-  <EmployeesForm
-    v-model="employee"
-    :error="error"
-    submitLabel="Update"
-    @submit="update"
-    :loading="loading"
-    :responseErrors="responseErrors"></EmployeesForm>
+  <div>
+    <v-btn
+      color="secondary"
+      @click="goToList()"
+    >
+      <v-icon>mdi-arrow-left</v-icon>
+      Return to List
+    </v-btn>
+    <EmployeesForm
+      v-model="employee"
+      :error="error"
+      submitLabel="Update"
+      @submit="update"
+      :loading="loading"
+      :responseErrors.sync="responseErrors"></EmployeesForm>
+  </div>
 </template>
 
 <script>
@@ -78,7 +87,12 @@ export default {
         .finally(() => {
           this.loading = false;
         });
-    }
+    },
+    goToList() {
+      this.$router.push({
+        name: 'employees-list'
+      })
+    },
   }
 };
 </script>

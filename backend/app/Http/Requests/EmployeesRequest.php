@@ -26,11 +26,11 @@ class EmployeesRequest extends FormRequest
     {
         return [
             'name' => 'required|min:4|max:191',
-            'date_birth' => 'required|date_format:Y-m-d',
+            'date_birth' => 'required|date',
             'sex' => 'required|max:1|in:m,f',
             'role' => 'required|max:80',
             'email' => 'required|email',
-            'hired_at' => 'required|date_format:Y-m-d',
+            'hired_at' => 'required|date',
             'phone' => 'required|max:15',
             'document' => $this->documentRules()
         ];

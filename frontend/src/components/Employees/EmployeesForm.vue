@@ -161,14 +161,24 @@ export default {
       set(value) {
         this.$emit("input", value);
       }
-    }
+    },
+    externErrors: {
+      get() {
+        return this.responseErrors;
+      },
+      set(value) {
+        this.$emit('update:responseErrors', value);
+      }
+    },
   },
   methods: {
     submit() {
       this.$emit("submit", this.employee);
     },
-    removeErrors() {
-
+    removeErrors(field) {
+      if (this.externErrors[field]) {
+        this.externErrors[field] = [];
+      }
     },
   }
 };
