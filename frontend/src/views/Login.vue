@@ -68,7 +68,7 @@ export default {
   }),
   created() {
     if (authenticationService.hasTokenValid()) {
-      this.$router.push({ name: "home" });
+      this.$router.push({ name: "employees-list" });
     }
   },
   methods: {
@@ -82,7 +82,7 @@ export default {
           return;
         }
 
-        this.$router.push({ name: "home" });
+        this.$router.push({ name: "employees-list" });
       });
     }
   }
