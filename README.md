@@ -6,7 +6,7 @@ Application with a CRUD (Create, Read, Update and Delete) for employees, with th
 
 ![Login](/screenshots/login.png?raw=true "Login")
 
-![List](/screenshots/list.PNG?raw=true "List employees")
+![List](/screenshots/list.png?raw=true "List employees")
 
 ![Form](/screenshots/form.PNG?raw=true "Add or edit employee")
 
